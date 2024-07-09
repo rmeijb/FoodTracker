@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/foodtrackerFragment">
+    <fragment
+        android:id="@+id/foodtrackerFragment"
+        android:name="com.example.foodtracker.fragments.FoodTrackerFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/foodtracker_fragment">
+        <action
+            android:id="@+id/action_foodtrackerFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_foodtrackerFragment_to_foodlogFragment"
+            app:destination="@id/foodlogFragment" />
+        <action
+            android:id="@+id/action_foodtrackerFragment_to_complaintFragment"
+            app:destination="@id/complaintFragment" />
+        <action
+            android:id="@+id/action_foodtrackerFragment_to_periodFragment"
+            app:destination="@id/periodFragment" />
+        <action
+            android:id="@+id/action_foodtrackerFragment_to_ontlastingFragment"
+            app:destination="@id/ontlastingFragment" />
+        <action
+            android:id="@+id/action_foodtrackerFragment_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+        <action
+            android:id="@+id/action_foodtrackerFragment_to_chartFragment"
+            app:destination="@id/chartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.foodtracker.fragments.CategoryFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/category_fragment">
+        <action
+            android:id="@+id/action_categoryFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodlogFragment"
+        android:name="com.example.foodtracker.fragments.FoodlogFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/foodlog_fragment">
+        <action
+            android:id="@+id/action_foodlogFragment_to_consumeUpdateFragment"
+            app:destination="@id/consumeUpdateFragment" />
+        <action
+            android:id="@+id/action_foodlogFragment_to_complaintUpdateFragment"
+            app:destination="@id/complaintUpdateFragment" />
+        <action
+            android:id="@+id/action_foodlogFragment_to_ontlastingUpdateFragment"
+            app:destination="@id/ontlastingUpdateFragment" />
+        <action
+            android:id="@+id/action_foodlogFragment_to_periodUpdateFragment"
+            app:destination="@id/periodUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.foodtracker.fragments.ProductFragment"
+        android:label="{stopName}"
+        tools:layout="@layout/product_fragment">
+        <argument
+            android:name="stopName"
+            app:argType="string" />
+        <argument
+            android:name="categoryId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_productFragment_to_consumeFragment"
+            app:destination="@id/consumeFragment" />
+        <action
+            android:id="@+id/action_productFragment_to_productUpdateFragment"
+            app:destination="@id/productUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/consumeFragment"
+        android:name="com.example.foodtracker.fragments.ConsumeFragment"
+        android:label="Eetmoment toevoegen"
+        tools:layout="@layout/consume_fragment">
+        <argument
+            android:name="productName"
+            app:argType="string" />
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+        <argument
+            android:name="unit"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/consumeUpdateFragment"
+        android:name="com.example.foodtracker.fragments.ConsumeUpdateFragment"
+        android:label="Wijzig Eetmoment"
+        tools:layout="@layout/consume_update_fragment">
+        <argument
+            android:name="consume"
+            app:argType="com.example.foodtracker.database.consume.Consume" />
+    </fragment>
+    <fragment
+        android:id="@+id/complaintFragment"
+        android:name="com.example.foodtracker.fragments.ComplaintFragment"
+        android:label="Klacht toevoegen"
+        tools:layout="@layout/complaint_fragment">
+    </fragment>
+    <fragment
+        android:id="@+id/complaintUpdateFragment"
+        android:name="com.example.foodtracker.fragments.ComplaintUpdateFragment"
+        android:label="Klacht wijzigen"
+        tools:layout="@layout/complaint_update_fragment">
+        <argument
+            android:name="complaint"
+            app:argType="com.example.foodtracker.database.complaint.Complaint" />
+    </fragment>
+    <fragment
+        android:id="@+id/periodFragment"
+        android:name="com.example.foodtracker.fragments.PeriodFragment"
+        android:label="Menstruatie toevoegen"
+        tools:layout="@layout/period_fragment">
+    </fragment>
+    <fragment
+        android:id="@+id/periodUpdateFragment"
+        android:name="com.example.foodtracker.fragments.PeriodUpdateFragment"
+        android:label="Menstruatie wijzigen"
+        tools:layout="@layout/period_update_fragment">
+        <argument
+            android:name="period"
+            app:argType="com.example.foodtracker.database.period.Period" />
+    </fragment>
+    <fragment
+        android:id="@+id/ontlastingFragment"
+        android:name="com.example.foodtracker.fragments.OntlastingFragment"
+        android:label="Ontlasting toevoegen"
+        tools:layout="@layout/ontlasting_fragment">
+    </fragment>
+    <fragment
+        android:id="@+id/ontlastingUpdateFragment"
+        android:name="com.example.foodtracker.fragments.OntlastingUpdateFragment"
+        android:label="Ontlasting wijzigen"
+        tools:layout="@layout/ontlasting_update_fragment">
+        <argument
+            android:name="ontlasting"
+            app:argType="com.example.foodtracker.database.ontlasting.Ontlasting" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.foodtracker.fragments.CalendarFragment"
+        android:label="Agenda"
+        tools:layout="@layout/calendar_fragment">
+        <action
+            android:id="@+id/action_calendarFragment_to_consumeUpdateFragment"
+            app:destination="@id/consumeUpdateFragment" />
+        <action
+            android:id="@+id/action_calendarFragment_to_complaintUpdateFragment"
+            app:destination="@id/complaintUpdateFragment" />
+        <action
+            android:id="@+id/action_calendarFragment_to_ontlastingUpdateFragment"
+            app:destination="@id/ontlastingUpdateFragment" />
+        <action
+            android:id="@+id/action_calendarFragment_to_periodUpdateFragment"
+            app:destination="@id/periodUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.example.foodtracker.fragments.ChartFragment"
+        android:label="Agenda"
+        tools:layout="@layout/chart_fragment">
+    </fragment>
+    <fragment
+        android:id="@+id/productUpdateFragment"
+        android:name="com.example.foodtracker.fragments.ProductUpdateFragment"
+        android:label="Product"
+        tools:layout="@layout/product_update_fragment">
+        <argument
+            android:name="category"
+            app:argType="string" />
+        <argument
+            android:name="categoryId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

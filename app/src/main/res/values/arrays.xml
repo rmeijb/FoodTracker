@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="severeness_array">
+        <item>Licht</item>
+        <item>Gemiddeld</item>
+        <item>Ernstig</item>
+    </string-array>
+    <string-array name="complaint_array">
+        <item>Buikpijn</item>
+        <item>Opgezette buik</item>
+        <item>Obstipatie</item>
+        <item>Boeren</item>
+    </string-array>
+    <string-array name="ontlasting_array">
+        <item>Keutels</item>
+        <item>Drol</item>
+    </string-array>
+</resources>

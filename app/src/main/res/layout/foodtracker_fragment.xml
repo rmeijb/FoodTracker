@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FoodTrackerFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/enter_how_much_cookies_you_want"
+        android:fillViewport="true"
+        android:padding="10dp">
+
+       <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/eten_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="20dp">
+
+            <ImageView
+                android:id="@+id/eten_imageView"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:contentDescription="Schijf van 5"
+                android:src="@drawable/schijfforlife"
+                app:layout_constraintBaseline_toBottomOf="@id/eten_layout"
+                app:layout_constraintLeft_toLeftOf="@id/eten_layout" />
+
+            <TextView
+                android:id="@+id/eten_textView"
+                android:layout_width="110dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="68dp"
+                android:text="Eten"
+                android:contentDescription="Enter How Much Cookies You Want"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/eten_imageView"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="20dp">
+
+            <ImageView
+                android:id="@+id/buik_imageView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/buik" />
+
+            <TextView
+                android:id="@+id/buik_textView"
+                android:layout_width="110dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="68dp"
+                android:text="Klachten"
+                android:contentDescription="Enter How Much Cookies You Want"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/buik_imageView"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:layout_margin="20dp">
+
+               <ImageView
+                   android:id="@+id/logboekCalendar_imageView"
+                   android:layout_width="200dp"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/logboek" />
+
+               <TextView
+                   android:id="@+id/logboek_textView"
+                   android:layout_width="110dp"
+                   android:layout_height="61dp"
+                   android:layout_marginStart="32dp"
+                   android:layout_marginTop="68dp"
+                   android:contentDescription="Enter How Much Cookies You Want"
+                   android:text="Logboek"
+                   android:textSize="20dp"
+                   app:layout_constraintStart_toEndOf="@+id/logboekCalendar_imageView"
+                   app:layout_constraintTop_toTopOf="parent" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:layout_margin="20dp">
+
+               <ImageView
+                   android:id="@+id/logboekList_imageView"
+                   android:layout_width="200dp"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/journal" />
+
+               <TextView
+                   android:id="@+id/logboeklist_textView"
+                   android:layout_width="110dp"
+                   android:layout_height="61dp"
+                   android:layout_marginStart="32dp"
+                   android:layout_marginTop="68dp"
+                   android:contentDescription="Enter How Much Cookies You Want"
+                   android:text="Logboek"
+                   android:textSize="20dp"
+                   app:layout_constraintStart_toEndOf="@+id/logboekList_imageView"
+                   app:layout_constraintTop_toTopOf="parent" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="20dp">
+
+               <ImageView
+                   android:id="@+id/ontlasting_imageView"
+                   android:layout_width="200dp"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ontlasting" />
+
+               <TextView
+                   android:id="@+id/ontlasting_textView"
+                   android:layout_width="110dp"
+                   android:layout_height="61dp"
+                   android:layout_marginStart="32dp"
+                   android:layout_marginTop="68dp"
+                   android:contentDescription="Enter How Much Cookies You Want"
+                   android:text="Ontlasting"
+                   android:textSize="20dp"
+                   app:layout_constraintStart_toEndOf="@+id/ontlasting_imageView"
+                   app:layout_constraintTop_toTopOf="parent" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:layout_margin="20dp">
+
+               <ImageView
+                   android:id="@+id/period_imageView"
+                   android:layout_width="200dp"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/period" />
+
+               <TextView
+                   android:id="@+id/period_textView"
+                   android:layout_width="110dp"
+                   android:layout_height="61dp"
+                   android:layout_marginStart="32dp"
+                   android:layout_marginTop="68dp"
+                   android:contentDescription="Enter How Much Cookies You Want"
+                   android:text="Menstruatie"
+                   android:textSize="20dp"
+                   app:layout_constraintStart_toEndOf="@+id/period_imageView"
+                   app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:layout_margin="20dp">
+
+               <ImageView
+                   android:id="@+id/chart_imageView"
+                   android:layout_width="200dp"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/barchart" />
+
+               <TextView
+                   android:id="@+id/chart_textView"
+                   android:layout_width="110dp"
+                   android:layout_height="61dp"
+                   android:layout_marginStart="32dp"
+                   android:layout_marginTop="68dp"
+                   android:contentDescription="Enter How Much Cookies You Want"
+                   android:text="Grafiek"
+                   android:textSize="20dp"
+                   app:layout_constraintStart_toEndOf="@+id/chart_imageView"
+                   app:layout_constraintTop_toTopOf="parent" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:layout_margin="20dp">
+
+               <ImageView
+                   android:id="@+id/export_imageView"
+                   android:layout_width="200dp"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/export" />
+
+               <TextView
+                   android:id="@+id/export_textView"
+                   android:layout_width="110dp"
+                   android:layout_height="61dp"
+                   android:layout_marginStart="32dp"
+                   android:layout_marginTop="68dp"
+                   android:contentDescription="Enter How Much Cookies You Want"
+                   android:text="Export data"
+                   android:textSize="20dp"
+                   app:layout_constraintStart_toEndOf="@+id/export_imageView"
+                   app:layout_constraintTop_toTopOf="parent" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+       </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</ScrollView>
